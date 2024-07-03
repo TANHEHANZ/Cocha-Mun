@@ -25,16 +25,7 @@ const Documentos = () => {
       file: "https://holis",
       imagen: "https://holis",
     },
-    {
-      nombre: "Protocolo",
-      file: "https://holis",
-      imagen: "https://holis",
-    },
-    {
-      nombre: "Ejemplo de Posición Oficial",
-      file: "https://holis",
-      imagen: "https://holis",
-    },
+  
   ];
   return (
     <div className="flex gap-4 flex-wrap">

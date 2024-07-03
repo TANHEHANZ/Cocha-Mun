@@ -6,7 +6,7 @@ import Foros from "./pages/secciones/foros";
 import Documentos from "./pages/secciones/documentos";
 import Calendario from "./pages/secciones/calendario";
 import Cronograma from "./pages/secciones/cronograma";
-import Agenda from "./pages/secciones/agenda";
+import Conversatorio from "./pages/secciones/conversatorio";
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/documento" element={<Documentos />} />
           <Route path="/calendario" element={<Calendario />} />
           <Route path="/cronograma" element={<Cronograma />} />
-          <Route path="/agenda" element={<Agenda />} />
+          <Route path="/conversatorio" element={<Conversatorio />} />
         </Route>
       </Routes>
     </BrowserRouter>

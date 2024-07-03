@@ -34,9 +34,9 @@ const Nav = () => {
           </li>
           <li
             className="relative cursor-pointer transition-all duration-300 hover:border-b-2 border-black hover:border-t-2"
-            onClick={() => handleScroll("comites")}
+            onClick={() => handleScroll("Foros")}
           >
-            Web oficiales
+            Foros y tópicos
           </li>
         </ul>
       </nav>

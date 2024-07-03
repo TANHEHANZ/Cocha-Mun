@@ -11,11 +11,11 @@ export const opciones = [
     name: "Documentos",
     icon: FileIcon,
   },
-  {
-    path:"",
-    name: "Foros y Tópicos",
-    icon: ForosIcon,
-  },
+  // {
+  //   path:"",
+  //   name: "Foros y Tópicos",
+  //   icon: ForosIcon,
+  // },
   {
     path:"calendario",
     name: "Calendario Academico",
@@ -27,8 +27,8 @@ export const opciones = [
     icon: Cronograma,
   },
   {
-    path:"agenda",
-    name: "Agenda",
+    path:"conversatorio",
+    name: "Conversatorio",
     icon: BookIcon,
   },
 ];
