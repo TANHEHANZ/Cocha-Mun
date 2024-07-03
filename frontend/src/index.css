@@ -1,0 +1,99 @@
+@import "@fontsource/poppins";
+@import 'react-big-calendar/lib/sass/styles.scss';
+@import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+background-color: #f4f4f4;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes slide-down {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+    z-index: 50;
+  }
+}
+
+.slide-down {
+  animation: slide-down 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes move-bottom {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.animacionBottom {
+  animation: move-bottom 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Sites {
+  & div > img {
+    width: 150px;
+  }
+}
+.enojao:hover {
+  border-top: 1px solid #000;
+}
+.sectionComites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  & > div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+}
+.highlight {
+  background-color: #25560c; /* Color de fondo que deseas aplicar */
+  color: white; /* Color del texto si es necesario */
+}
