@@ -13,11 +13,7 @@ const Nav = () => {
             src={logoCocha}
             alt="Logo Cochabamba"
           />
-          <img
-            className="w-14 h-14 object-cover"
-            src={logoOnu}
-            alt="Logo Onu"
-          />
+  
         </section>
         <ul className="flex flex-1 justify-center gap-8 font-medium text-sm">
           <li

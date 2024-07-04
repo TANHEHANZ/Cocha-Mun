@@ -29,11 +29,7 @@ const Footer = () => {
               src={logoCocha}
               alt="Logo Cochabamba"
             />
-            <img
-              className="w-30  h-30 object-cover"
-              src={logoOnu}
-              alt="Logo Onu"
-            />
+       
           </div>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
