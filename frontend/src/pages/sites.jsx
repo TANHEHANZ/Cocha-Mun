@@ -21,7 +21,7 @@ const Sites = () => {
             className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer"
             onClick={() => {
               setVerFoto({ ...item, imgSrc: imgData });
-              handleScroll(item.Foro);
+              handleScroll("foro");
             }}
           >
             <img
@@ -38,7 +38,7 @@ const Sites = () => {
       </section>
       {verFoto && (
         <article
-          id={verFoto.Foro}
+          id="foro"
           className="mt-5 p-4 bg-white rounded-lg shadow-md flex"
         >
           <section className="flex flex-col gap-6 w-1/2 p-6">
