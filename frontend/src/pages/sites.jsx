@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import datosForo from "./components/utils/foros.json";
 import imgData from "../assets/car1.jpg";
+import { handleScroll } from "./components/utils/scroll";
 
 const Sites = () => {
   const [verFoto, setVerFoto] = useState(null);
@@ -18,7 +19,10 @@ const Sites = () => {
           <div
             key={i}
             className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer"
-            onClick={() => setVerFoto({ ...item, imgSrc: imgData })}
+            onClick={() => {
+              setVerFoto({ ...item, imgSrc: imgData });
+              handleScroll(item.Foro);
+            }}
           >
             <img
               src={imgData}
@@ -33,7 +37,10 @@ const Sites = () => {
         ))}
       </section>
       {verFoto && (
-        <article className="mt-5 p-4 bg-white rounded-lg shadow-md flex">
+        <article
+          id={verFoto.Foro}
+          className="mt-5 p-4 bg-white rounded-lg shadow-md flex"
+        >
           <section className="flex flex-col gap-6 w-1/2 p-6">
             <h4 className="text-center text-[1.1em] font-semibold ">
               {verFoto.Siglas}
