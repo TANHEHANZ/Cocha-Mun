@@ -39,13 +39,13 @@ const Sites = () => {
       {verFoto && (
         <article
           id="foro"
-          className="mt-5 p-4 bg-white rounded-lg shadow-md flex"
+          className="mt-5 p-4 bg-white rounded-lg shadow-md flex relative"
         >
-          <section className="flex flex-col gap-6 w-1/2 p-6">
-            <h4 className="text-center text-[1.1em] font-semibold ">
+          <section className="flex flex-col gap-6 md:w-[70%] p-6 w-full">
+            <h4 className="md:text-center text-[1.1em] font-semibold ">
               {verFoto.Siglas}
             </h4>
-            <p className="text-center text-[1em] ">
+            <p className="md:text-center text-[1em] w-[65%] md:w-full ">
               <strong>Topico</strong> : {verFoto.Tópico}
             </p>
             <p className=" text-[1em] ">
@@ -57,7 +57,7 @@ const Sites = () => {
               {verFoto.Foro}
             </p>
           </section>
-          <div className="flex justify-center w-[25em]">
+          <div className="flex justify-center  absolute w-[10em] top-0 h-[7em] right-0 md:w-[14em] md:h-full">
             <img
               src={verFoto.imgSrc}
               alt="Foto"
