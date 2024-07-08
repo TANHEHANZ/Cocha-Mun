@@ -12,7 +12,7 @@ const Sites = () => {
         Foros y tópicos
       </h3>
       <section
-        id="comites"
+        id="Foros"
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
         {datosForo.map((item, i) => (
@@ -66,6 +66,8 @@ const Sites = () => {
           </div>
         </article>
       )}
+
+      
     </>
   );
 };

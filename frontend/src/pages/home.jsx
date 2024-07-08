@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 
 const Home = () => {
   return (
-    <div className="w-[85vw] mx-auto ">
+    <div className="w-[90vw] mx-auto overflow-hidden sm:w-[85vw]">
       <Nav />
       <Heder />
       <Autoridades />

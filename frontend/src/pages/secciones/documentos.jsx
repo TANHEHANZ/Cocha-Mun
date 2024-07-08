@@ -25,34 +25,38 @@ const Documentos = () => {
       file: "https://holis",
       imagen: "https://holis",
     },
-  
   ];
-  return (
-    <div className="flex gap-4 flex-wrap">
-      {documentoData.map((item, i) => (
-        <div
-          key={i}
-          style={{ backgroundColor: getRandomColor() }}
-          className="flex justify-between items-center gap-4 rounded-lg w-[25em]"
-        >
-          {img && (
-            <img
-              src={img ? img : item.imagen}
-              alt="Imagen de documento"
-              className="w-[6em] h-[4em] object-cover rounded-md"
-            />
-          )}
-          <p className="text-start">{item.nombre}</p>
 
-          <button>
-            <img
-              src={DownloadIcon}
-              alt="Icono de descarga"
-              className="w-8 h-8 mr-5"
-            />
-          </button>
-        </div>
-      ))}
+  return (
+    <div className="flex gap-4 flex-wrap overflow-hidden">
+      {documentoData.map((item, i) => {
+        const borderColor = getRandomColor();
+        return (
+          <div
+            key={i}
+            style={{ borderColor }}
+            className="flex justify-between items-center gap-4 rounded-lg w-[20em] border-2 h-18 m-auto md:m-0"
+          >
+            {img && (
+              <img
+                src={img ? img : item.imagen}
+                alt="Imagen de documento"
+                className="w-[6em] h-[80px] object-cover rounded-md"
+              />
+            )}
+            <p className="text-start w-[60%]">{item.nombre}</p>
+
+            <button>
+              <img
+                src={DownloadIcon}
+                alt="Icono de descarga"
+                style={{ backgroundColor: borderColor }}
+                className="w-12 h-[80px] p-2"
+              />
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -8,17 +8,18 @@ const Autoridades = () => {
   const handleClick = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex >= comentariosData.length ? 0 : prevIndex + 1));
-    }, 7000);
+      setActiveIndex((prevIndex) => (prevIndex >= comentariosData.length -1?0  : prevIndex + 1));
+    }, 8000);
 
-    return () => clearInterval(interval); 
-  }, []);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
 
   return (
     <div
-      className="flex gap-4 w-[100%] justify-center transition-all duration-500 h-[65vh] overflow-hidden"
+      className="flex gap-4 justify-center transition-all duration-500   md:overflow-y-hidden relative h-full md:h-[400px] overflow-y-hidden"
       id="autoridades"
     >
       {comentariosData.map((datos, i) => (
@@ -28,6 +29,7 @@ const Autoridades = () => {
           datos={datos}
           activeIndex={activeIndex}
           handleClick={handleClick}
+          className="snap-center"
         />
       ))}
     </div>

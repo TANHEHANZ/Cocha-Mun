@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Cronometro = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-08-31T23:59:59"); // Fecha y hora objetivo
+    const targetDate = new Date("2024-07-31T23:59:59");
     const now = new Date();
     const difference = targetDate - now;
 
@@ -41,23 +41,20 @@ const Cronometro = () => {
     { unit: "days", label: "DD" },
     { unit: "hours", label: "HH" },
     { unit: "minutes", label: "MM" },
-    { unit: "seconds", label: "SS" }
+    { unit: "seconds", label: "SS" },
   ];
 
   return (
-    <div>
-      <p className="uppercase text-[.8em] ">Inicio del evento en :</p>
-      <section className="flex p-4 shadow-md justify-center gap-12 pl-8 rounded-lg">
+    <div className="flex flex-col items-center absolute z-10 bottom-6 m-2  sm:text-black md:relative ">
+      <p className="uppercase text-[.8em] mb-0 self-start bg-white rounded-t-lg p-1" >Inicio del evento en:</p>
+      <section className="flex flex-wrap justify-center gap-4 p-2 shadow-md rounded-r-lg border border-gray-400 bg-transparent text-white md:text-black lg:text-black md:text-[1.2em]">
         {timeUnits.map(({ unit, label }, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center border-r pr-8 border-gray-400 transition-transform transform duration-500"
-            style={{
-              animation: `pulseAnimation 1s`,
-            }}
+            className="flex flex-col justify-center items-center w-8 sm:w-20 md:w-32 lg:w-20 xl:w-20"
           >
-            <p className="text-xl font-light">{timeLeft[unit]}</p>
-            <strong>{label}</strong>
+            <p className="text-[.9em] font-light   ">{timeLeft[unit]}</p>
+            <strong className="text-[.6em]">{label}</strong>
           </div>
         ))}
       </section>

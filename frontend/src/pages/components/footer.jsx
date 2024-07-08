@@ -10,28 +10,69 @@ const Footer = () => {
     },
     {
       title: "Secciones",
-      items: ["Documentos", "Foros y tópicos", "Calendario academico", "Cronograma de actividades","Agenda"],
+      items: [
+        "Documentos",
+        "Foros y tópicos",
+        "Calendario academico",
+        "Cronograma de actividades",
+        "Agenda",
+      ],
     },
     {
       title: "Sitios web oficiales",
       items: ["Sitios web"],
     },
   ];
+  const CONTACTS = [
+    {
+      cargo: "Director Unesco juan",
+      Teléfono: " (591) 123-4567",
+      Correo: " contacto@cochabamba.bo",
+      Dirección: " Av. Siempre Viva 123, Cochabamba, Bolivia",
+    },
+    {
+      cargo: "Director Unesco juan",
+      Teléfono: " (591) 123-4567",
+      Correo: " contacto@cochabamba.bo",
+      Dirección: " Av. Siempre Viva 123, Cochabamba, Bolivia",
+    },
+  ];
 
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="relative w-[vw100] mt-4 border-t pt-10 bg-white rounded-lg">
+    <footer className="relative w-[vw100] mt-4 border-t pt-10 bg-white  rounded-lg border-2 border-gray-400">
       <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <div className="flex justify-start items-center">
+        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 ">
+          <div className="flex justify-start items-center flex-col md:flex-row">
             <img
               className="w-30  h-30 object-cover ml-12"
               src={logoCocha}
               alt="Logo Cochabamba"
             />
-       
+            <div className="mt-4">
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="mb-3 font-medium opacity-40"
+              >
+                Contactos
+              </Typography>
+              {CONTACTS.map((contact, index) => (
+                <Typography
+                  key={index}
+                  as="p"
+                  color="gray"
+                  className="py-1.5 text-[.9em] ml-4"
+                >
+                  <p> {contact.cargo}</p>
+                  <p> {contact.Teléfono}</p>
+                  <p> {contact.Correo}</p>
+                  <p> {contact.Dirección}</p>
+                </Typography>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-3 justify-between gap-4">
+          <div className="grid  justify-between gap-4 md:grid-cols-3">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
