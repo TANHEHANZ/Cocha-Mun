@@ -6,16 +6,14 @@ import { handleScroll } from "./utils/scroll";
 const Nav = () => {
   return (
     <>
-      <nav className="flex h-[8vh] bg-transparent900 justify-start shadow-top-bottom border-[#0002] border-2 items-center font-sans border-1 rounded-xl mt-1 overflow-hidden fixed top-0 w-[85dvw] z-50 ">
-        <section className="flex justify-center items-center gap-6 ">
+      <nav className="flex h-[8vh] bg-transparent900 justify-center shadow-top-bottom border-[#0002] border-2 items-center font-sans border-1 rounded-xl  overflow-hidden fixed top-0 w-[85dvw] z-50 ">
           <img
-            className="w-10 h-10 object-cover md:ml-2 xl:ml-12 md:w-16 md:h-12"
+            className="w-10 h-10 object-cover md:ml-2 xl:ml-12 md:w-16 md:h-16"
             src={logoCocha}
             alt="Logo Cochabamba"
           />
   
-        </section>
-        <ul className="flex flex-1 justify-center  font-medium text-[.7em]  md:text-[.8em] lg:text-[.9em]  gap-4 lg:gap-8">
+        {/* <ul className="flex flex-1 justify-center  font-medium text-[.7em]  md:text-[.8em] lg:text-[.9em]  gap-4 lg:gap-8">
           <li
             className="relative cursor-pointer transition-all duration-300 enojao"
             onClick={() => handleScroll("autoridades")}
@@ -34,7 +32,7 @@ const Nav = () => {
           >
             Foros y tópicos
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </>
   );

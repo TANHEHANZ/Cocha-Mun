@@ -45,9 +45,9 @@ const Cronometro = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center absolute z-10 bottom-6 m-2  sm:text-black md:relative ">
-      <p className="uppercase text-[.8em] mb-0 self-start bg-white rounded-t-lg p-1" >Inicio del evento en:</p>
-      <section className="flex flex-wrap justify-center gap-4 p-2 shadow-md rounded-r-lg border border-gray-400 bg-transparent text-white md:text-black lg:text-black md:text-[1.2em]">
+    <div className="flex flex-col items-center absolute z-10 bottom-6 left-6  ">
+      <p className="uppercase text-[.8em] mb-0 self-start bg-white rounded-t-lg p-2 px-4" >Inicio del evento en:</p>
+      <section className="flex flex-wrap justify-center gap-4 p-2 shadow-md rounded-r-lg border backdrop-blur-md  border-gray-400 bg-transparent text-white  md:text-[1.2em] ">
         {timeUnits.map(({ unit, label }, index) => (
           <div
             key={index}

@@ -1,26 +1,31 @@
 import React from "react";
-import Select from "../components/select";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { opciones } from "../components/utils/options";
+import { colorsExadecimal } from "../components/utils/colorRandom";
 
 const Index = () => {
   const navigation = useNavigate();
   return (
     <section
       id="secciones"
-      className="h-auto flex  items-start relative mb-10 flex-col"
+      className="h-auto flex items-center relative mb-10 flex-col justify-center w-[85vw] mx-auto"
     >
-      {/* <Select /> */}
-      <section className="flex justify-center items-center gap-5 w-full my-5 flex-wrap ">
-        {opciones.map((item, i) => (
-          <div onClick={() => navigation(item.path)} key={i} className="flex justify-center items-center g-2 cursor-pointer shadow-md border border-gray-300 px-5 py-2">
-            <img src={item.icon} alt="" />
-            <div>{item.name}</div>
-          </div>
-        ))}
+      <section className="grid grid-cols-3 gap-2 w-full">
+        {opciones.map((item, i) => {
+          const backgroundColor = colorsExadecimal[i % colorsExadecimal.length];
+          return (
+            <div
+              key={i}
+              onClick={() => navigation(item.path)}
+              className="h-44 border flex justify-center items-center cursor-pointer rounded-lg text-white "
+              style={{ backgroundColor }}
+            >
+              <img src={item.icon} alt="" />
+              <div>{item.name}</div>
+            </div>
+          );
+        })}
       </section>
-
-      <Outlet />
     </section>
   );
 };

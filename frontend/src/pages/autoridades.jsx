@@ -1,37 +1,41 @@
 import React, { useEffect, useState } from "react";
 import Comentarios from "./comentarios";
 import { comentariosData } from "./components/utils/coment";
+import "tailwindcss/tailwind.css";
+import { colors } from "./components/utils/colorRandom";
 
 const Autoridades = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleClick = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex >= comentariosData.length -1?0  : prevIndex + 1));
-    }, 8000);
+      setActiveIndex((prevIndex) => (prevIndex + 1) % comentariosData.length);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [activeIndex]);
+  }, []);
 
   return (
     <div
-      className="flex gap-4 justify-center transition-all duration-500   md:overflow-y-hidden relative h-full md:h-[400px] overflow-y-hidden"
-      id="autoridades"
+      id="autoridades "
+      className="bg-customPurpple900T h-full py-4 w-full flex flex-col gap-4 "
     >
-      {comentariosData.map((datos, i) => (
-        <Comentarios
-          key={i}
-          index={i}
-          datos={datos}
-          activeIndex={activeIndex}
-          handleClick={handleClick}
-          className="snap-center"
-        />
-      ))}
+      <article className="w-[85vw] mx-auto">
+        <h2 className="text-xl font-medium  text-white">
+          Palabras de las autoridades
+        </h2>
+        {comentariosData.map(
+          (datos, i) =>
+            i === activeIndex && (
+              <Comentarios
+                key={i}
+                datos={datos}
+                activeIndex={activeIndex}
+                className={`border-${colors[i % colors.length]}`}
+              />
+            )
+        )}
+      </article>
     </div>
   );
 };

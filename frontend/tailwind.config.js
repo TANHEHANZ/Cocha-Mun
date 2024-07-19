@@ -16,9 +16,11 @@
           customRed900: "#AF1856",
           customPurpple100: "#6C56A1",
           customPurpple900: "#482778",
-          transparent900: "rgba(255, 255, 255, 0.92)",
+          customPurpple900T: "rgb(35 6 81 / 65%)",
+          customPurppleTransparent: "rgb(225 224 231)",
+          transparent900: "rgba(255, 255, 255, 0.5)",
           transparent900Black: "#0008",
-          customSelec: "#E3E6F7",
+          customSelec: "rgb(96 112 204 / 45%)",
         },
         fontFamily: {
           sans: ["Poppins", "sans-serif"],

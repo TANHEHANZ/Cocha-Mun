@@ -1,20 +1,18 @@
-// Home Component
-import React from "react";
+import React, { useMemo } from "react";
 import Nav from "./components/nav";
 import Heder from "./components/heder";
 import Autoridades from "./autoridades";
 import Index from "./secciones";
-import Sites from "./sites";
 import Footer from "./components/footer";
 
 const Home = () => {
   return (
-    <div className="w-[90vw] mx-auto overflow-hidden sm:w-[85vw]">
+     <div className="mx-auto overflow-hidden flex flex-col justify-center items-center gap-4 bg-customSelec relative">
       <Nav />
+      <div className="w-1/2 bg-customPurpple900 absolute top-0 left-0 h-1/4 -z-10 blur-3xl moving-element" ></div>
       <Heder />
       <Autoridades />
       <Index />
-      <Sites />
       <Footer />
     </div>
   );
