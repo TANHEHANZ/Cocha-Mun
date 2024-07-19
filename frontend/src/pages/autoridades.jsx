@@ -3,7 +3,6 @@ import Comentarios from "./comentarios";
 import { comentariosData } from "./components/utils/coment";
 import "tailwindcss/tailwind.css";
 import { colors } from "./components/utils/colorRandom";
-
 const Autoridades = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
