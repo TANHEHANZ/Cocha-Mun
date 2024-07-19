@@ -3,6 +3,7 @@ import Comentarios from "./comentarios";
 import { comentariosData } from "./components/utils/coment";
 import "tailwindcss/tailwind.css";
 import { colors } from "./components/utils/colorRandom";
+
 const Autoridades = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -14,13 +15,15 @@ const Autoridades = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const borderColorClass = `border-${colors[activeIndex % colors.length]}`;
+
   return (
     <div
-      id="autoridades "
-      className="bg-customPurpple900T h-full py-4 w-full flex flex-col gap-4 "
+      id="autoridades"
+      className="bg-customPurpple900T h-full py-4 w-full flex flex-col gap-4"
     >
       <article className="w-[85vw] mx-auto">
-        <h2 className="text-xl font-medium  text-white">
+        <h2 className="text-xl font-medium text-white">
           Palabras de las autoridades
         </h2>
         {comentariosData.map(
@@ -29,8 +32,7 @@ const Autoridades = () => {
               <Comentarios
                 key={i}
                 datos={datos}
-                activeIndex={activeIndex}
-                className={`border-${colors[i % colors.length]}`}
+                className={borderColorClass}
               />
             )
         )}

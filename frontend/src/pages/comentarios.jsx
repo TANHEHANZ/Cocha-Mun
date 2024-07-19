@@ -1,7 +1,6 @@
 import React from "react";
 
 const Comentarios = ({ datos, className }) => {
-  console.log(className);
   const destruct = className.split("-");
   const backgraundColor = `text-${destruct[1]}`;
   return (
