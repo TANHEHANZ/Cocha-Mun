@@ -29,7 +29,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-customPurpple900T p-8 rounded-t-md relative">
-      <div className="w-1/3 bg-customPurpple900 absolute -top-20 left-0 h-[20rem] -z-10 blur-3xl rounded-3xl"></div>
+      <div className="w-1/3 bg-customPurpple100 absolute -top-20 left-0 h-[20rem] -z-10 blur-3xl rounded-3xl"></div>
 
       <div className="w-[85vw] mx-auto grid gap-8 grid-cols-1 md:grid-cols-4 place-items-center">
         <img src={logoCocha} alt="Logo" className="w-32" />
