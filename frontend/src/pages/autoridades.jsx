@@ -20,7 +20,7 @@ const Autoridades = () => {
   return (
     <div
       id="autoridades"
-      className="bg-customPurpple900T h-full py-4 w-full flex flex-col gap-4"
+      className="bg-customBlue900 h-full py-4 w-full flex flex-col gap-4"
     >
       <article className="w-[85vw] mx-auto">
         <h2 className="text-xl font-medium text-white">

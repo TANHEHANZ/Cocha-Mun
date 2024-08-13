@@ -10,6 +10,7 @@
           customBlue100: "#4CC0DE",
           customBlue900: "#00ACD9",
           customGreen900: "#009878",
+          customGreen100: "#67C1B1",
           customYellow100: "#F8B155",
           customYellow900: "#F08621",
           customRed100: "#EA547B",

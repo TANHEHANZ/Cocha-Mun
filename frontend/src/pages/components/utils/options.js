@@ -1,49 +1,40 @@
-import BookIcon from "../../../assets/icons/Book.svg";
-import FileIcon from "../../../assets/icons/File.svg";
-import ForosIcon from "../../../assets/icons/Communication.svg";
-import CalendarioAcademico from "../../../assets/icons/Schedule.svg";
-import Cronograma from "../../../assets/icons/VerticalTimeline.svg";
 import Documentos from "../../secciones/documentos";
 import Calendario from "../../secciones/calendario";
 import ForosCard from "../../secciones/foros";
-
+import { CALENDARIO, CRONOGRAMA, CRONOMETRO, DOCUMENTO, FOROS, LIBRO } from "./icons/icon";
 
 export const opciones = [
   {
-    path:"documento",
+    path: "documento",
     name: "Documentos",
-    icon: FileIcon,
-    Component:Documentos,
+    icon: DOCUMENTO,
+    Component: Documentos,
   },
   {
-    path:"foros",
+    path: "foros",
     name: "Foros y Tópicos",
-    icon: ForosIcon,
-    Component:ForosCard,
-
-
+    icon: FOROS,
+    Component: ForosCard,
   },
   {
-    path:"calendario",
+    path: "calendario",
     name: "Calendario",
-    icon: CalendarioAcademico,
-    Component:Calendario,
-
+    icon: CALENDARIO,
+    Component: Calendario,
   },
   {
-    path:"cronometro",
+    path: "cronometro",
     name: "Cronómetro",
-    icon: Cronograma,
+    icon: CRONOMETRO,
   },
   {
-    path:"conversatorio",
+    path: "conversatorio",
     name: "Conversatorio",
-    icon: Cronograma,
-
+    icon: CRONOGRAMA,
   },
   {
-    path:"cronograma",
+    path: "cronograma",
     name: "Cronograma de actividades",
-    icon: BookIcon,
+    icon: LIBRO,
   },
 ];
