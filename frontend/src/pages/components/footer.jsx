@@ -1,7 +1,12 @@
 import React from "react";
 import logoCocha from "../../assets/logo/cohabamba.png";
 
-import { FaWhatsapp, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import {
+  FaWhatsapp,
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+} from "react-icons/fa6";
 
 const Footer = () => {
   const CONTACTS = [
@@ -43,11 +48,12 @@ const Footer = () => {
           ))}
         </section>
         <div className="flex flex-wrap text-2xl w-full col-span-1 md:col-span-4 justify-center items-center gap-4 mt-4 md:mt-0">
-          <p className="text-base text-gray-300 w-full md:w-auto">Síguenos en:</p>
-          <FaWhatsapp className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10" />
-          <FaFacebookF className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10" />
-          <FaInstagram className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10" />
-          <FaTiktok className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10" />
+          <p className="text-base text-gray-300 w-full md:w-auto">
+            Síguenos en:
+          </p>
+          <FaFacebookF className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10 cursor-pointer" />
+          <FaInstagram className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10 cursor-pointer" />
+          <FaTiktok className="bg-gray-300 rounded-full p-2 w-8 h-8 md:w-10 md:h-10 cursor-pointer" />
         </div>
       </div>
       <div className="w-[85vw] mx-auto mt-8 text-center text-gray-300 text-sm">

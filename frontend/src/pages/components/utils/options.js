@@ -1,9 +1,10 @@
 import Documentos from "../../secciones/documentos";
 import Calendario from "../../secciones/calendario";
 import ForosCard from "../../secciones/foros";
-import { CALENDARIO, CRONOGRAMA, CRONOMETRO, DOCUMENTO, FOROS, LIBRO } from "./icons/icon";
+import { CALENDARIO, CONVERSATORIO, CRONOGRAMA, CRONOMETRO, DOCUMENTO, FOROS, LIBRO } from "./icons/icon";
+import CronometroUser from "../../secciones/cronometroUser";
 
-export const opciones = [
+export const opciones = [ 
   {
     path: "documento",
     name: "Documentos",
@@ -26,11 +27,12 @@ export const opciones = [
     path: "cronometro",
     name: "Cronómetro",
     icon: CRONOMETRO,
+    Component:CronometroUser
   },
   {
     path: "conversatorio",
     name: "Conversatorio",
-    icon: CRONOGRAMA,
+    icon: CONVERSATORIO,
   },
   {
     path: "cronograma",

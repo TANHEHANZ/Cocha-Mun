@@ -1,15 +1,21 @@
-import BookIcon from "../../../../assets/icons/Book.svg";
-import FileIcon from "../../../../assets/icons/File.svg";
-import ForosIcon from "../../../../assets/icons/Communication.svg";
-import CalendarioAcademico from "../../../../assets/icons/Schedule.svg";
-import Cronometro from "../../../../assets/icons/cronometro.png";
-import Cronograma from "../../../../assets/icons/VerticalTimeline.svg";
-import ChatData from "../../../../assets/icons/chat.png";
+import React from "react";
 
-export const LIBRO = () => <BookIcon />;
-export const DOCUMENTO = () => <FileIcon />;
-export const FOROS = () => <ForosIcon />;
-export const CALENDARIO = () => <CalendarioAcademico />;
-export const CRONOGRAMA = () => <Cronograma />;
-export const CRONOMETRO = () => <img src={Cronometro} alt="Cronómetro" />;
-export const CHAT = () => <img src={ChatData} alt="Chat" />;
+import { FaBook } from "react-icons/fa";
+import { CiFileOn, CiTimer } from "react-icons/ci";
+import { IoMdChatboxes } from "react-icons/io";
+import { GrView } from "react-icons/gr";
+import {
+  IoCalendarNumber,
+  IoCalendarOutline,
+  IoCloudDownload,
+} from "react-icons/io5";
+import { BsWechat } from "react-icons/bs";
+export const LIBRO = () => <FaBook />;
+export const DOCUMENTO = () => <CiFileOn />;
+export const FOROS = () => <IoMdChatboxes />;
+export const CALENDARIO = () => <IoCalendarNumber />;
+export const CRONOGRAMA = () => <IoCalendarOutline />;
+export const CRONOMETRO = () => <CiTimer />;
+export const VIEW = () => <GrView />;
+export const DOWNLOAD = () => <IoCloudDownload />;
+export const CONVERSATORIO = () => <BsWechat />;

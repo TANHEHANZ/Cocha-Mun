@@ -32,11 +32,11 @@ const Index = () => {
               onClick={() =>
                 renderComponent(item.Component, backgroundColor, item.name)
               }
-              className="h-44 border flex justify-center items-center cursor-pointer rounded-lg text-white"
+              className="h-44 border flex justify-center items-center cursor-pointer rounded-lg text-white gap-2 "
               style={{ backgroundColor }}
             >
-              <img src={item.icon} alt="" />
-              <div>{item.name}</div>
+              <item.icon  />
+              <p className=" text-lg">{item.name}</p>
             </div>
           );
         })}

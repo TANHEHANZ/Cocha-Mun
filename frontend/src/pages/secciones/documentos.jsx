@@ -1,62 +1,52 @@
 import React from "react";
-import img from "../../assets/coment3.jpg";
 import DownloadIcon from "../../assets/icons/descargas.svg";
-import { getRandomColor } from "../components/utils/colorRandom";
+import doc1 from "../../assets/documentos/PROTOCOLO COCHAMUN - 2024..pdf";
+import doc2 from "../../assets/documentos/Convocatoria 2024 - CochaMUN.pdf";
+import img1 from "../../assets/documentos/1.png";
+import img2 from "../../assets/documentos/2.png";
+import { DOWNLOAD, VIEW } from "../components/utils/icons/icon";
 
 const Documentos = () => {
   const documentoData = [
     {
-      nombre: "Protocolo",
-      file: "https://holis",
-      imagen: "https://holis",
+      nombre: "Protocolo CochaMun 2024",
+      file: doc1,
+      img: img1,
     },
     {
-      nombre: "Ejemplo de Posición Oficial",
-      file: "https://holis",
-      imagen: "https://holis",
-    },
-    {
-      nombre: "Protocolo",
-      file: "https://holis",
-      imagen: "https://holis",
-    },
-    {
-      nombre: "Ejemplo de Posición Oficial",
-      file: "https://holis",
-      imagen: "https://holis",
+      nombre: "Convocatoria 2024 CochaMun",
+      file: doc2,
+      img: img2,
     },
   ];
 
   return (
     <div className="flex gap-4 flex-wrap overflow-hidden">
-      {documentoData.map((item, i) => {
-        const borderColor = getRandomColor();
-        return (
-          <div
-            key={i}
-            style={{ borderColor }}
-            className="flex justify-between items-center gap-4 rounded-lg w-[20em] border-2 h-18 m-auto md:m-0"
-          >
-            {img && (
-              <img
-                src={img ? img : item.imagen}
-                alt="Imagen de documento"
-                className="w-[6em] h-[80px] object-cover rounded-md"
-              />
-            )}
-            <p className="text-start w-[60%]">{item.nombre}</p>
+      {documentoData.map((item, i) => (
+        <div
+          key={i}
+          className="relative group flex flex-col items-center justify-center w-[20em] h-[20rem] border-2 rounded-lg overflow-hidden transition-transform duration-300 ease-in-out"
+        >
+          <img
+            src={item.img}
+            alt={item.nombre}
+            className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+          />
 
-            <button>
-              <img
-                src={DownloadIcon}
-                alt="Icono de descarga"
-                style={{ backgroundColor: borderColor }}
-                className="w-12 h-[80px] p-2"
-              />
-            </button>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <p className="text-center mb-4">{item.nombre}</p>
+
+            <a href={item.file} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center items-center">
+              <VIEW />
+              Previsualizar
+            </a>
+
+            <a href={item.file} download className="absolute top-2 right-2 border p-2 hover:bg-customGreen900 rounded-md ">
+              <DOWNLOAD />
+            </a>
           </div>
-        );
-      })}
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import { CarouselCustomNavigation } from "./carroucel";
 import Cronometro from "./cronometro";
-import elemento from "../../assets/elemento.png";
+import logoCocha from "../../assets/logo/cohabamba.png";
 
 const Heder = () => {
   return (
-    <div className="flex flex-col  mt-10 relative ">
-      <section className="flex flex-col mt-8 justify-start items-start  ">
-        <h1 className="flex text-[2rem] sm:text-[3rem] sm:flex-col font-bold absolute bg-gray-200 pt-4 px-4 rounded-b-xl ml-4 slide-bottom top-5 z-10 ">
+    <div className="flex flex-col  relative ">
+      <section className="flex flex-col  justify-start items-start  ">
+        <h1 className="flex text-[2rem] sm:text-[3rem] sm:flex-col font-bold absolute bg-gray-200 bg-opacity-85 pt-4 px-4 rounded-r-md ml-4 slide-bottom top-40 -left-2 z-10 ">
           <p className=" flex">
             <strong className="text-customPurpple900 font-semibold">
               Cocha
@@ -20,6 +20,7 @@ const Heder = () => {
             Modelo de Naciones Unidas
           </p>
         </h1>
+        <img src={logoCocha} alt="" className="fixed z-20 w-28 h-24 object-cover right-4 rounded-md top-2 bg-white bg-opacity-55 p-2 " />
         <Cronometro />
       </section>
 

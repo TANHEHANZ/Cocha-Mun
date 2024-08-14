@@ -21,7 +21,7 @@
           customPurppleTransparent: "rgb(225 224 231)",
           transparent900: "rgba(255, 255, 255, 0.5)",
           transparent900Black: "#0008",
-          customSelec: "rgb(96 112 204 / 45%)",
+          customSelec: "rgb(96 112 204 / 25%)",
         },
         fontFamily: {
           sans: ["Poppins", "sans-serif"],

@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
 }
 @keyframes slideInLeft {
   0% {
@@ -27,7 +27,10 @@ body {
     opacity: 1;
   }
 }
-
+svg{
+  color: currentColor;
+  font-size: 28px;
+}
 .animate-slide-in-left {
   animation: slideInLeft 0.5s forwards;
 }
@@ -231,4 +234,13 @@ body {
   background-color: #009878;
   bottom: 240px;
   right: 240px;
+}
+.scroll-hidden {
+  overflow: auto;
+  /* Oculta las barras de desplazamiento en navegadores WebKit */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

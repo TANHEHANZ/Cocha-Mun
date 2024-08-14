@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Cronometro = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-07-31T23:59:59");
+    const targetDate = new Date("2024-08-31T23:59:59");
     const now = new Date();
     const difference = targetDate - now;
 

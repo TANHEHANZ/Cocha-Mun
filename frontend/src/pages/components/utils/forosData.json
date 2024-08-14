@@ -1,0 +1,87 @@
+[
+    {
+      "N": 1,
+      "Foro": "Consejo de Seguridad Internacional",
+      "Siglas": "CSI",
+      "Tópico": "Conflicto armado Israel - Palestina",
+      "Descripción": "Discute medidas para abordar el conflicto armado entre Israel y Palestina."
+    },
+    {
+      "N": 2,
+      "Foro": "Consejo de Seguridad Internacional",
+      "Siglas": "CSI",
+      "Tópico": "Agenda abierta",
+      "Descripción": "Trata diversos temas de seguridad internacional no específicamente agendados."
+    },
+    {
+      "N": 3,
+      "Foro": "Consejo Económico y Social de las Naciones Unidas",
+      "Siglas": "ECOSOC",
+      "Tópico": "Bitcoins",
+      "Descripción": "Analiza el impacto económico y social de las criptomonedas, enfocándose en Bitcoin."
+    },
+    {
+      "N": 4,
+      "Foro": "Organización Mundial de la Salud",
+      "Siglas": "OMS",
+      "Tópico": "Uso de Transgénicos - Riesgos en la salud",
+      "Descripción": "Evalúa los riesgos para la salud asociados al uso de transgénicos en la alimentación."
+    },
+    {
+      "N": 5,
+      "Foro": "Organización para la Educación la Ciencia y la Cultura",
+      "Siglas": "UNESCO",
+      "Tópico": "Reducción en la calidad educativa en América Latina",
+      "Descripción": "Aborda las causas y soluciones para la reducción en la calidad educativa en América Latina."
+    },
+    {
+      "N": 6,
+      "Foro": "Fondo de las Naciones Unidas para la Infancia",
+      "Siglas": "UNICEF",
+      "Tópico": "Trata y tráfico/ niñez",
+      "Descripción": "Trata sobre la trata y tráfico de niños, enfocándose en la protección de la infancia."
+    },
+    {
+      "N": 7,
+      "Foro": "Organización de las Naciones Unidas dedicada a la igualdad de género y el empoderamiento de la mujer",
+      "Siglas": "ONU MUJERES",
+      "Tópico": "",
+      "Descripción": "Promueve la igualdad de género y el empoderamiento de las mujeres a nivel global."
+    },
+    {
+      "N": 8,
+      "Foro": "Programa para el Medio Ambiente",
+      "Siglas": "PNUMA",
+      "Tópico": "Crisis climática",
+      "Descripción": "Analiza medidas para mitigar y adaptarse a la crisis climática global."
+    },
+    {
+      "N": 9,
+      "Foro": "Consejo Económico y Social: Comisión de Ciencia y Tecnología para el Desarrollo de las Naciones Unidas",
+      "Siglas": "CSTD",
+      "Tópico": "Potenciales riesgo y mal uso de Inteligencia Artificial",
+      "Descripción": "Examina los riesgos y usos inapropiados potenciales de la inteligencia artificial en el desarrollo."
+    },
+    {
+      "N": 10,
+      "Foro": "Comisión de Prevención del Delito y Justicia Penal",
+      "Siglas": "CCPCJ",
+      "Tópico": "Adolescentes en conflicto con la ley penal",
+      "Descripción": "Aborda estrategias de prevención del delito y justicia penal para adolescentes en conflicto con la ley."
+    },
+    {
+      "N": 11,
+      "Foro": "Foro Nacional",
+      "Siglas": "",
+      "Tópico": "Tema abierto",
+      "Descripción": "Foro nacional con temas abiertos para discusión y debate público."
+    },
+    {
+      "N": 12,
+      "Foro": "Foro Municipal",
+      "Siglas": "",
+      "Tópico": "Tema abierto",
+      "Descripción": "Foro municipal para discutir temas locales de interés comunitario."
+    }
+  ]
+  
