@@ -1,7 +1,13 @@
 import { Carousel } from "@material-tailwind/react";
-import car1 from "../../assets/car1.jpg"
-import asamblea1 from "../../assets/asamblea1.png"
+import img2 from "../../assets/CARRUSEL/2 (2).jpg";
+import img3 from "../../assets/CARRUSEL/3.jpg";
+import img4 from "../../assets/CARRUSEL/4.jpg";
+import img5 from "../../assets/CARRUSEL/5.jpg";
+import img6 from "../../assets/CARRUSEL/6.jpg";
+import img7 from "../../assets/CARRUSEL/7.jpg";
 export function CarouselCustomNavigation() {
+  const img = [img2, img3, img4, img5, img6, img7];
+
   return (
     <Carousel
       autoplay={true}
@@ -22,22 +28,14 @@ export function CarouselCustomNavigation() {
         </div>
       )}
     >
-      <img
-        src={car1}
-        alt="image 1"
-        className="h-full w-full object-cover"
-      />
-      <img
-      // src={}
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-        alt="image 2"
-        className="h-full w-full object-cover"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-        alt="image 3"
-        className="h-full w-full object-cover"
-      />
+      {img.map((slectImg, index) => (
+        <img
+          key={index}
+          src={slectImg}
+          alt={`image ${slectImg}`}
+          className="w-full  h-full object-cover object-top"
+        />
+      ))}
     </Carousel>
   );
 }
