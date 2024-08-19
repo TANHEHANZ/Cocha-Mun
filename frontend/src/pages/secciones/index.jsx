@@ -44,7 +44,7 @@ const Index = () => {
       <Modal
         isOpen={isOpen}
         closeModal={closeModal}
-        color={{ backgroundColor: selectComponent.color }}
+        color={ selectComponent.color}
         title={selectComponent.title}
       >
         {selectComponent.component &&

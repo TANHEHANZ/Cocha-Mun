@@ -99,7 +99,7 @@ const CustomCountdownTimer = () => {
           e.preventDefault();
           handleStart();
         }}
-        className="flex flex-wrap justify-center items-center gap-4 text-white text-xl"
+        className="flex flex-wrap justify-center items-center gap-4 text-black text-xl"
       >
         <div className="flex flex-col items-center">
           <input
@@ -107,7 +107,7 @@ const CustomCountdownTimer = () => {
             value={inputHours}
             onChange={(e) => setInputHours(e.target.value)}
             placeholder="Hours"
-            className="bg-transparent border w-24 h-20 text-center rounded-md"
+            className="bg-transparent border w-24 h-20 border-gray-400 text-center rounded-md"
           />
           <label htmlFor="Horas">HH</label>
         </div>
@@ -117,7 +117,7 @@ const CustomCountdownTimer = () => {
             value={inputMinutes}
             onChange={(e) => setInputMinutes(e.target.value)}
             placeholder="Minutes"
-            className="bg-transparent border w-24 h-20 text-center rounded-md"
+            className="bg-transparent border w-24 h-20 border-gray-400 text-center rounded-md"
           />
           <label htmlFor="minutos">MM</label>
         </div>
@@ -127,7 +127,7 @@ const CustomCountdownTimer = () => {
             value={inputSeconds}
             onChange={(e) => setInputSeconds(e.target.value)}
             placeholder="Seconds"
-            className="bg-transparent border w-24 h-20 text-center rounded-md"
+            className="bg-transparent border w-24 h-20 border-gray-400 text-center rounded-md"
           />
           <label htmlFor="segundos">SS</label>
         </div>
@@ -135,7 +135,7 @@ const CustomCountdownTimer = () => {
           <button
             type="submit"
             className={`w-1/3 bg-customGreen900 text-white h-12 rounded-md text-[14px] ${
-              isRunning ? "bg-opacity-25" : ""
+              isRunning ? "bg-opacity-50 cursor-not-allowed" : ""
             } `}
           >
             Iniciar cronómetro
@@ -143,7 +143,7 @@ const CustomCountdownTimer = () => {
           <button
             onClick={handleStop}
             className={`w-1/3 bg-customRed900 text-white px-4 py-2 rounded-md ${
-              !isRunning ? "bg-opacity-25" : ""
+              !isRunning ? "bg-opacity-50 cursor-not-allowed" : ""
             }`}
           >
             Detener
@@ -151,7 +151,7 @@ const CustomCountdownTimer = () => {
           <button
             onClick={handleReset}
             className={`w-1/3 bg-customYellow900 text-white px-4 py-2 rounded-md ${
-              !isRunning ? "bg-opacity-25" : ""
+              !isRunning ? "bg-opacity-50 cursor-not-allowed" : ""
             }`}
           >
             Reiniciar
@@ -159,14 +159,14 @@ const CustomCountdownTimer = () => {
         </div>
       </form>
 
-      <section className="flex flex-wrap justify-center gap-4 p-2 shadow-md rounded-r-lg border border-gray-400 bg-transparent text-white">
+      <section className="flex flex-wrap justify-center gap-4 p-2 shadow-md rounded-r-lg border border-gray-400 bg-transparent text-black">
         {timeUnits.map(({ unit, label }, index) => (
           <div
             key={index}
             className="flex flex-col justify-center items-center w-40 h-20 "
           >
             <p
-              className={`text-3xl font-light  px-20 ${
+              className={`text-3xl font-light border-r-black  px-20 ${
                 index < 2 ? "border-r" : ""
               }`}
             >
