@@ -21,10 +21,10 @@ export const colors = [
 ];
 
 export const colorsExadecimal = [
-  "#009878",
-  "#482778",
-  "#AF1856",
-  "rgb(35 6 81 / 95%)",
-  "#4CC0DE",
-  "#F8B155",
+  "#4EB8A7",
+  "#6C559F",
+  "#E9527A",
+  "#6C559F",
+  "#4ABFDD",
+  "#F7B152",
 ];

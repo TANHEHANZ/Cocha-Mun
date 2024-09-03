@@ -2,8 +2,12 @@ import React from "react";
 import DownloadIcon from "../../assets/icons/descargas.svg";
 import doc1 from "../../assets/documentos/PROTOCOLO COCHAMUN - 2024..pdf";
 import doc2 from "../../assets/documentos/Convocatoria 2024 - CochaMUN.pdf";
+import doc3 from "../../assets/documentos/EJEMPLO DE POSICIÓN OFICIAL COCHAMUN 2024. DOCUMENTO FINAL.pdf";
+import doc4 from "../../assets/documentos/GUÍA BÁSICA COCHAMUN 2024 OFICIAL.pdf";
 import img1 from "../../assets/documentos/1.png";
 import img2 from "../../assets/documentos/2.png";
+import img3 from "../../assets/documentos/3.png";
+import img4 from "../../assets/documentos/4.png";
 import { DOWNLOAD, VIEW } from "../components/utils/icons/icon";
 
 const Documentos = () => {
@@ -17,6 +21,16 @@ const Documentos = () => {
       nombre: "Convocatoria 2024 CochaMun",
       file: doc2,
       img: img2,
+    },
+    {
+      nombre: "Ejemplo de posición oficial cochamun 2024",
+      file: doc3,
+      img: img3,
+    },
+    {
+      nombre: "Guia básica Cochamun 2024",
+      file: doc4,
+      img: img4,
     },
   ];
 

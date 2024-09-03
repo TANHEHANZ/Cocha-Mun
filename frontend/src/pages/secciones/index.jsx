@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { opciones } from "../components/utils/options";
 import { colorsExadecimal } from "../components/utils/colorRandom";
 import Modal from "../components/modal";
@@ -11,17 +10,28 @@ const Index = () => {
     component: null,
     color: "",
     title: "",
+    link: "", 
   });
 
-  const renderComponent = (comp, color, title) => {
-    openModal();
-    setSelectComponent({ component: comp, color: color, title: title });
+  const handleItemClick = (item) => {
+    if (item.Component) {
+      openModal();
+      setSelectComponent({
+        component: item.Component,
+        color:
+          colorsExadecimal[opciones.indexOf(item) % colorsExadecimal.length],
+        title: item.name,
+        link: "",
+      });
+    } else if (item.Link) {
+      window.open(item.Link, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
     <section
       id="secciones"
-      className="h-auto flex items-center relative mb-10 flex-col justify-center w-[85vw] mx-auto"
+      className="h-auto flex items-center relative flex-col justify-center mx-auto background w-full p-16"
     >
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 w-full">
         {opciones.map((item, i) => {
@@ -29,14 +39,12 @@ const Index = () => {
           return (
             <div
               key={i}
-              onClick={() =>
-                renderComponent(item.Component, backgroundColor, item.name)
-              }
-              className="h-44 border flex justify-center items-center cursor-pointer rounded-lg text-white gap-2 "
+              onClick={() => handleItemClick(item)}
+              className="h-44 border flex justify-center items-center cursor-pointer rounded-lg text-white gap-2"
               style={{ backgroundColor }}
             >
-              <item.icon  />
-              <p className=" text-lg">{item.name}</p>
+              <item.icon />
+              <p className="text-lg">{item.name}</p>
             </div>
           );
         })}
@@ -44,7 +52,7 @@ const Index = () => {
       <Modal
         isOpen={isOpen}
         closeModal={closeModal}
-        color={ selectComponent.color}
+        color={selectComponent.color}
         title={selectComponent.title}
       >
         {selectComponent.component &&

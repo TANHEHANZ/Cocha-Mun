@@ -11,16 +11,16 @@ import CONSEJOAUTONOMIAS from "../../../assets/foros/F. AUTONOMÍAS.jpg";
 import OMS from "../../../assets/foros/OMS FOTO.jpg";
 
 export const foroImages = {
-    UNICEF: Uncef,
-    CPDJP: CPDJP,
-    CSI: CSI,
-    ECOSOC: ECOSOC,
-    UNESCO: UNESCO,
-    "ONU MUJERES": ONUMUJERES,
-    PNUMA: PNUMA,
-    CCTD: CCTD,
-    "FORO MUNICIPAL": FMUNICIPAL,
-    "CONSEJO DE ATONOMÍAS": CONSEJOAUTONOMIAS,
-    "CSI - Consejo de Seguridad Internacional":CSI,
-    OMS:OMS
-  };
+  UNICEF: Uncef,
+  CPDJP: CPDJP,
+  "CSI - Consejo de Seguridad Internacional (Foro Doble)": CSI,
+  ECOSOC: ECOSOC,
+  UNESCO: UNESCO,
+  "ONU MUJERES": ONUMUJERES,
+  PNUMA: PNUMA,
+  CCTD: CCTD,
+  "FORO MUNICIPAL": FMUNICIPAL,
+  "CONSEJO DE ATONOMÍAS": CONSEJOAUTONOMIAS,
+  "CSI - Consejo de Seguridad Internacional": CSI,
+  OMS: OMS,
+};

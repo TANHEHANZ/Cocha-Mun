@@ -1,0 +1,9 @@
+name: reactjs-ONU
+services:
+  frontend:
+    build:
+      context: ./frontend
+    restart: always
+    ports:
+      - 81:90
+ 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Comentarios from "./comentarios";
 import { comentariosData } from "./components/utils/coment";
 import "tailwindcss/tailwind.css";
@@ -10,7 +10,7 @@ const Autoridades = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % comentariosData.length);
-    }, 5000);
+    }, 35000);
 
     return () => clearInterval(interval);
   }, []);
@@ -29,11 +29,7 @@ const Autoridades = () => {
         {comentariosData.map(
           (datos, i) =>
             i === activeIndex && (
-              <Comentarios
-                key={i}
-                datos={datos}
-                className={borderColorClass}
-              />
+              <Comentarios key={i} datos={datos} className={borderColorClass} />
             )
         )}
       </article>

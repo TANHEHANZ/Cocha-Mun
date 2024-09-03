@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 const Cronometro = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-08-31T23:59:59");
+    const targetDate = new Date("2024-09-04T23:59:59");
     const now = new Date();
     const difference = targetDate - now;
 
@@ -45,7 +45,7 @@ const Cronometro = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center absolute z-10 bottom-6 left-6  ">
+    <div className="flex flex-col items-center absolute z-30 bottom-6 left-6  ">
       <p className="uppercase text-[.8em] mb-0 self-start bg-white rounded-t-lg p-2 px-4" >Inicio del evento en:</p>
       <section className="flex flex-wrap justify-center gap-4 p-2 shadow-md rounded-r-lg border backdrop-blur-md  border-gray-400 bg-transparent text-white  md:text-[1.2em] ">
         {timeUnits.map(({ unit, label }, index) => (
